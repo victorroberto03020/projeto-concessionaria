@@ -1,2 +1,2 @@
 # projeto-concessionaria
-site focado em aartigos automaticos
+site focado em artigos automaticos
