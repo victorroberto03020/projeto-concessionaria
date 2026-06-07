@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Promoções - AutoParts</title>
+  <link rel="stylesheet" href="estilos/promo-style.css">
+  <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">AutoParts</div>
+    <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="promoções.html" class="active">Promoções</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+     <div class="cart">
+      🛒 <span id="cart-count">0</span>
+    </div>
+  </header>
+
+  <!-- Banner de Promoções -->
+  <section class="promo-banner">
+    <h1>🔥 Super Ofertas da Semana 🔥</h1>
+    <p>Descontos imperdíveis em rodas, som e acessórios automotivos.</p>
+  </section>
+
+  <!-- Lista de Promoções -->
+  <main class="promocoes">
+    <h2>Produtos em Promoção</h2>
+    <div class="grid">
+
+      <div class="card" data-name="rastreador gps">
+         <span class="desconto">-10%</span>
+      <img src="imagens/Rastreador Veicular GPS.jpg" alt="Rastreador GPS">
+      <h3>Rastreador Veicular GPS</h3>
+      <p class="preco-antigo">R$ 500</p>
+      <p class="preco">R$ 450,00</p>
+      <button  class="btn" onclick="addToCart('Rastreador Veicular GPS', 450)">
+          Adicionar ao Carrinho
+      </button>
+    </div>
+      </div>
+
+      <div class="card">
+        <span class="desconto">-15%</span>
+        <img src="imagens/kit de som automatico.jpeg" alt="Kit Som Automotivo">
+        <h3>Kit Som Automotivo</h3>
+        <p class="preco-antigo">R$ R$ 899,00</p>
+        <p class="preco">R$ 764,15</p>
+        <button  class="btn" onclick="addToCart('Kit Som Automotivo', 764,15)">
+          Adicionar ao Carrinho
+        </button>
+      </div>
+
+      <div class="card">
+        <span class="desconto">-30%</span>
+        <img src="imagens/Volante Esportivo.jpg">
+        <h3>Volante Esportivo</h3>
+        <p class="preco-antigo">R$ 799,00</p>
+        <p class="preco">R$ 559,00</p>
+        <button  class="btn" onclick="addToCart('Volante Esportivo', 559)">
+          Adicionar ao Carrinho
+        </button>
+      </div>
+    </div>
+    <section class="carrinho">
+      <h2>Seu Carrinho</h2>
+      <ul id="cart-items"></ul>
+      <p><strong>Total: R$ <span id="cart-total">0.00</span></strong></p>
+  </section>
+
+  <section class="carrinho">
+    <ul id="cart-items"></ul>
+    <button id="finalizarCompraBtn">Finalizar Compra</button>
+  </section>
+  </main>
+
+    <script src="script-promo.js"></script>
+</body>
+</html>

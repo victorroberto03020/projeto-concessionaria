@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Promoções - AutoParts</title>
+  <link rel="stylesheet" href="estilos/prod-style.css">
+  <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">AutoParts</div>
+    <nav class="nav">
+      <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="produtos.html">Produtos</a></li>
+          <li><a href="promoções.html" class="active">Promoções</a></li>
+          <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+    <div class="cart">
+      🛒 <span id="cart-count">0</span>
+    </div>
+  </header>
+
+  <!-- ===== BARRA DE PESQUISA ===== -->
+  <section class="search-bar">
+    <input type="text" id="searchInput" placeholder="Pesquisar produto...">
+  </section>
+
+  <!-- ===== PRODUTOS ===== -->
+  <section class="produtos">
+    <!-- Categoria: Acessórios Externos -->
+    <div class="card" data-name="aerofólio esportivo">
+      <img src="imagens/aerofolico esportivo.jpeg" alt="Aerofólio Esportivo">
+      <h3>Aerofólio Esportivo</h3>
+      <p class="preco">R$ 650,00</p>
+      <button  class="btn" onclick="addToCart('Aerofólio Esportivo', 650)">
+          Adicionar ao Carrinho
+    </div>
+
+    <div class="card" data-name="Som Automotivo">
+        <img src="imagens/kit de som automatico.jpeg">
+        <h3>Kit Som Automotivo</h3>
+        <p class="preco">R$ 764,15</p>
+        <button  class="btn" onclick="addToCart('Kit Som Automotivo', 764)">
+          Adicionar ao Carrinho
+        </button>
+      </div>
+
+    <div class="card" data-name="antena esportiva">
+      <img src="imagens/Antena Automotiva Esportiva.jpeg" alt="Antena Esportiva">
+      <h3>Antena Automotiva Esportiva</h3>
+      <p class="preco">R$ 90,00</p>
+      <button  class="btn" onclick="addToCart('Antena Automotiva Esportiva', 90)">
+          Adicionar ao Carrinho
+      </button>
+    </div>
+
+    <div class="card" data-name="Roda Esportiva">
+        <img src="imagens/Roda Esportiva 18.jpeg">
+        <h3>Roda Esportiva 18</h3>
+        <p class="preco">R$ 990,00</p>
+        <button  class="btn" onclick="addToCart('Roda Esportiva 18', 990)">
+          Adicionar ao Carrinho
+        </button>
+      </div>
+
+    <!-- Categoria: Iluminação -->
+    <div class="card" data-name="farol led">
+      <img src="imagens/Farol de LED.jpeg" alt="Farol de LED">
+      <h3>Farol de LED</h3>
+      <p class="preco">R$ 300,00</p>
+      <button  class="btn" onclick="addToCart('Farol de LED', 300)">
+          Adicionar ao Carrinho
+      </button>
+    </div>
+
+    <div class="card" data-name="lanterna traseira led">
+      <img src="imagens/Lanterna Traseira LED.jpg" alt="Lanterna Traseira LED">
+      <h3>Lanterna Traseira LED</h3>
+      <p class="preco">R$ 450,00</p>
+      <button  class="btn" onclick="addToCart('Lanterna Traseira LED', 450)">
+          Adicionar ao Carrinho
+      </button>
+    </div>
+
+    <!-- Categoria: Som & Multimídia -->
+    <div class="card" data-name="central multimídia">
+      <img src="imagens/Central Multimídia.jpeg" alt="Central Multimídia">
+      <h3>Central Multimídia</h3>
+      <p class="preco">R$ 799,00</p>
+      <button  class="btn" onclick="addToCart('Central Multimídia', 799)">
+          Adicionar ao Carrinho
+      </button>
+    </div>
+
+    <div class="card" data-name="Volante Esportivo">
+        <img src="imagens/Volante Esportivo.jpg">
+        <h3>Volante Esportivo</h3>
+         <p class="preco">R$ 559,00</p>
+        <button  class="btn" onclick="addToCart('Volante Esportivo', 559)">
+          Adicionar ao Carrinho
+        </button>
+      </div>
+
+    <!-- Categoria: Segurança -->
+    <div class="card" data-name="alarme automotivo">
+      <img src="imagens/Alarme Automotivo.jpeg" alt="Alarme Automotivo">
+      <h3>Alarme Automotivo</h3>
+      <p class="preco">R$ 350,00</p>
+      <button  class="btn" onclick="addToCart('Alarme Automotivo', 350)">
+          Adicionar ao Carrinho
+      </button>
+    </div>
+
+    <div class="card" data-name="rastreador gps">
+      <img src="imagens/Rastreador Veicular GPS.jpg" alt="Rastreador GPS">
+      <h3>Rastreador Veicular GPS</h3>
+      <p class="preco">R$ 450,00</p>
+      <button  class="btn" onclick="addToCart('Rastreador Veicular GPS', 450)">
+          Adicionar ao Carrinho
+      </button>
+    </div>
+  </section>
+
+   <section class="carrinho">
+      <h2>Seu Carrinho</h2>
+      <ul id="cart-items"></ul>
+      <p><strong>Total: R$ <span id="cart-total">0.00</span></strong></p>
+  </section>
+
+  <section class="carrinho">
+    <ul id="cart-items"></ul>
+    <button id="finalizarCompraBtn">Finalizar Compra</button>
+  </section>
+
+  <!-- ===== SCRIPT DE PESQUISA ===== -->
+  
+  <script src="script-prod.js"></script>
+</body>
+</html>
